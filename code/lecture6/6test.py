@@ -52,23 +52,42 @@
 # print(c)
 # members.sort()
 # print(members)
+# إنشاء قائمة تحتوي على درجات الطلاب
 grates = [90,87,81,98,96,99]
+
+# حساب مجموع الدرجات باستخدام الدالة sum()
 s = sum(grates)
 print(s)
+
+# حساب عدد عناصر القائمة باستخدام الدالة len()
 l = len(grates)
 print(l)
+
+# حساب المتوسط الحسابي بقسمة المجموع على العدد
 av = s/l
 print(av)
+
+# تقريب المتوسط إلى منزلة عشرية واحدة باستخدام round()
 av = round(av,1)
 print(av)
+
+# طباعة أقل درجة في القائمة باستخدام min()
 print(min(grates))
+
+# طباعة أعلى درجة في القائمة باستخدام max()
 print(max(grates))
+
+# الإشارة بمتغير جديد إلى نفس القائمة (وليس نسخة منها)
 grates1 = grates
 print(grates1)
+
+# حذف آخر عنصر من grates1 — سيؤثر على grates أيضاً لأنهما يشيران لنفس القائمة
 grates1.pop(-1)
 print(grates1)
 print(grates)
-grates2 = grates.copy()
-grates3 = list(grates)
+
+# إنشاء نسختين مستقلتين من القائمة الأصلية
+grates2 = grates.copy()   # نسخ بالدالة copy()
+grates3 = list(grates)    # نسخ بالدالة list()
 print("grates2 = ",grates2)
 print("grates3 = ",grates3)

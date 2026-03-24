@@ -1,10 +1,9 @@
 # البرنامج الثالث: قاعدة بيانات درجات الطلاب
-# Program 3: Student grades database from text file
 
-# فتح ملف البيانات data.txt بوضع القراءة r مع ترميز utf-8
+# فتح ملف البيانات grades_data.txt بوضع القراءة r مع ترميز utf-8
 # هذا الملف يحتوي على أسماء الطلاب ودرجاتهم مفصولة بمسافة
 # كل سطر فيه: اسم_الطالب درجته
-file = open("data.txt", "r", encoding="utf-8")
+file = open("grades_data.txt", "r", encoding="utf-8")
 
 # قراءة كامل محتوى الملف كنص واحد
 content = file.read()
