@@ -1,0 +1,27 @@
+import webbrowser
+
+
+urls = {}
+
+print("مرحبًأ بك في مخزن الروابط")
+while True:
+	option = input("اكتب الرقم 1 إذا كنت ترغب في فتح واحد من الروابط المضافة, أو اضغط 2 إذا كنت تريد إضافة رابط جديد")
+	if option == "1":
+		keys = list(urls.keys())
+		print("الروابط المتوفرة: ")
+		if keys == []:
+			print("لا توجد عناصر مضافة")
+		else:
+			for key in keys:
+				print(key)
+			name = input("اكتب اسم الموقع الذي تريد فتحه")
+			try:
+				link = urls[name]
+			except KeyError:
+				print("هذا الموقع غير موجود")
+				continue
+			webbrowser.open(link)
+	elif option == "2":
+		key = input("اكتب الاسم الظاهري للموقع الذي تريد إضافته")
+		link = input("الصق الرابط هنا")
+		urls[key] = link
