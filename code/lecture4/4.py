@@ -1,6 +1,6 @@
 
 
-# hالجمل الشرطية if
+# الجمل الشرطية if
 # name = "محمود"
 # userName = input("أدخل اسم المستخدم:")
 # if name == userName:

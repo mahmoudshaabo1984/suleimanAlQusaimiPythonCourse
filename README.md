@@ -1,536 +1,490 @@
-# دورة البايثون للمكفوفين مع سليمان القسيمي — المستوى الأول
+# Python Course for Blind Learners with Suleiman Al-Qusaimi — Level 1
 
-> مستودع شخصي يوثّق رحلة تعلم لغة Python، مُعدٌّ خصيصاً للمكفوفين وضعاف البصر.
-> جميع الشروحات والتعليقات باللغة العربية.
-> الدورة تُقدَّم عبر قناة علي العَمْري على يوتيوب.
+A personal repository documenting the journey of learning the Python programming language. This course is designed specifically for blind and visually impaired learners. The original lessons are taught in Arabic on the Ali Al-Amri YouTube channel. This repository contains the source code, exercises, and final applications produced during the course.
 
----
+## Accessibility Statement
 
-## فهرس المحتويات
+This README is written and structured for screen reader users. It uses:
 
-- [روابط الدورة](#روابط-الدورة)
-- [هيكل المستودع](#هيكل-المستودع)
-- [محتوى الدروس التفصيلي](#محتوى-الدروس-التفصيلي)
-  - [الدرس 2 — أساسيات الطباعة والمتغيرات](#الدرس-2--أساسيات-الطباعة-والمتغيرات)
-  - [الدرس 3 — المتغيرات وتحويل الأنواع](#الدرس-3--المتغيرات-وتحويل-الأنواع)
-  - [الدرس 4 — الجمل الشرطية](#الدرس-4--الجمل-الشرطية)
-  - [الدرس 5 — النصوص وعملياتها](#الدرس-5--النصوص-وعملياتها)
-  - [الدرس 6 — القوائم](#الدرس-6--القوائم-lists)
-  - [الدرس 7 — الحلقات المتقدمة والقوائم المتداخلة](#الدرس-7--الحلقات-المتقدمة-والقوائم-المتداخلة)
-  - [الدرس 8 — المكتبات والأرقام العشوائية](#الدرس-8--المكتبات-والأرقام-العشوائية)
-  - [الدرس 9 — الدوال والقواميس ومعالجة الأخطاء](#الدرس-9--الدوال-والقواميس-ومعالجة-الأخطاء)
-  - [الدرس 10 — التعامل مع الملفات](#الدرس-10--التعامل-مع-الملفات)
-- [التطبيقات المستقلة](#التطبيقات-المستقلة-مجلد-apps)
-- [ملفات بايثون الإضافية](#ملفات-بايثون-الإضافية-مجلد-python-extra-files)
-- [الأكواد الإضافية لجميع المحاضرات](#الأكواد-الإضافية-لجميع-المحاضرات)
-- [كيفية تشغيل البرامج](#كيفية-تشغيل-البرامج)
-- [جدول تطور الدورة](#جدول-تطور-الدورة)
-- [الفئة المستهدفة](#الفئة-المستهدفة)
-- [المدرب](#المدرب)
-- [صاحب المستودع](#صاحب-المستودع)
-- [كيفية المساهمة](#كيفية-المساهمة-وقبول-طلبات-السحب-pull-requests)
+- A linear heading hierarchy with no skipped levels.
+- Descriptive link text that makes sense out of context.
+- Plain markdown tables with clear column headers.
+- Code blocks with explicit language tags.
+- No decorative ASCII art, icons, or emojis.
 
----
+If you find any section that is difficult to navigate with a screen reader, please open an issue in this repository.
 
-## روابط الدورة
+## Table of Contents
 
-| الوصف | الرابط |
-|-------|--------|
-| قائمة التشغيل على يوتيوب | [دورة البايثون للمكفوفين — المستوى الأول](https://www.youtube.com/playlist?list=PLNotpB8d1N19Xt7cCJi0R0mQZMKaZEOXL) |
-| موقع علي العَمْري | [ali86.net/py2](https://www.ali86.net/py2) |
+- [Course Links](#course-links)
+- [Repository Structure](#repository-structure)
+- [Detailed Lesson Content](#detailed-lesson-content)
+- [Independent Applications](#independent-applications)
+- [Extra Python Files](#extra-python-files)
+- [Extra Codes for All Lectures](#extra-codes-for-all-lectures)
+- [Tested Code Folder](#tested-code-folder)
+- [How to Run the Programs](#how-to-run-the-programs)
+- [Course Progression Table](#course-progression-table)
+- [Target Audience](#target-audience)
+- [Instructor](#instructor)
+- [Repository Owner](#repository-owner)
+- [How to Contribute and Accept Pull Requests](#how-to-contribute-and-accept-pull-requests)
 
----
+## Course Links
 
-## هيكل المستودع
+| Description | Link |
+| --- | --- |
+| YouTube playlist for the course | [Python Course for Blind Learners — Level 1](https://www.youtube.com/playlist?list=PLNotpB8d1N19Xt7cCJi0R0mQZMKaZEOXL) |
+| Instructor's website | [ali86.net/py2](https://www.ali86.net/py2) |
+| Main repository on GitHub | [mahmoudshaabo1984/suleimanAlQusaimiPythonCourse](https://github.com/mahmoudshaabo1984/suleimanAlQusaimiPythonCourse) |
 
-```
+## Repository Structure
+
+The repository is organised into five main top-level folders:
+
+- `code/` — lesson source code, organised by lecture number from lecture 2 to lecture 10, plus a shared `sounds/` folder.
+- `apps/` — independent standalone applications built during and after the course.
+- `extra codes for all lectures/` — a flat collection of all lecture code files in one place for quick review.
+- `python extra files/` — written summaries, references, and extra resources.
+- `suleimanAlQusaimiPythonCourse tested/` — a separate folder containing tested and revised versions of the lecture code and the final applications.
+
+A high level tree view of the repository is shown below.
+
+```text
 suleimanAlQusaimiPythonCourse/
-│
-├── code/                              # أكواد الدروس (من الدرس 2 إلى 10)
-│   ├── lecture2/                      # الدرس الثاني
-│   ├── lecture3/                      # الدرس الثالث
-│   ├── lecture4/                      # الدرس الرابع
-│   ├── lecture5/                      # الدرس الخامس
-│   ├── lecture6/                      # الدرس السادس
-│   ├── lecture7/                      # الدرس السابع
-│   ├── lecture8/                      # الدرس الثامن
-│   ├── lecture9/                      # الدرس التاسع
-│   ├── lecture10/                     # الدرس العاشر
-│   └── sounds/                        # ملفات صوتية (correct.wav / error.wav / fail.wav)
-│
-├── extra codes for all lectures/      # أكواد إضافية لجميع المحاضرات في ملف واحد
-│   ├── 2.py  3.py  4.py  5.py  6.py  # أكواد المحاضرات 2-6
-│   ├── 7.py  8.py  9.py  10.py       # أكواد المحاضرات 7-10
-│   ├── 5test.py  6test.py  7test.py  # ملفات التجارب
-│   ├── 8test.py  9test.py  test.py   # ملفات الاختبار
-│   └── data.txt  sounds/             # بيانات وملفات صوتية
-│
-├── python extra files/                # ملخصات نصية ومراجع وملفات إضافية
-│   ├── link store.txt                 # قائمة روابط مرجعية
-│   ├── دوال القوائم.txt               # ملخص دوال القوائم
-│   ├── ملخص الدرس 8[12274].txt       # ملخص الدرس الثامن
-│   ├── ملخص الدرس التاسع ...txt      # ملخص الدرس التاسع
-│   ├── ملخص الدرس السابع ...txt      # ملخص الدرس السابع
-│   ├── ملخص كتابي للدرس السادس ...txt # ملخص الدرس السادس
-│   ├── موجز لدرس النصوص (1).txt      # ملخص درس النصوص
-│   └── sounds.rar                     # أرشيف الملفات الصوتية
-│
-└── apps/                              # تطبيقات مستقلة وبرامج تطبيقية
-    ├── channel_name_gen/              # مشروع مولّد أسماء القنوات
-    ├── file_operations.py             # عمليات الكتابة والإلحاق والقراءة على الملفات
-    ├── multiplication_table.py        # جدول الضرب (كتابة إلى ملف)
-    ├── student_grades.py              # قاعدة بيانات درجات الطلاب من ملف
-    ├── Number Guessing Game.py        # لعبة تخمين الرقم
-    ├── password generator.py          # مولّد كلمات مرور عشوائية
-    ├── Calculate Average Using Function.py   # حساب المتوسط بالدوال
-    ├── simple Calculator.py           # آلة حاسبة بسيطة
-    ├── آلة حاسبة معدلة خالية من الأخطاء .py  # آلة حاسبة محسّنة
-    ├── linkDictionary.py              # قاموس الروابط
-    ├── linkManager_v1.py              # مدير الروابط الإصدار الأول
-    ├── smartLinkManagev2.py           # مدير الروابط الذكي الإصدار الثاني
-    ├── مدير الروابط مصمم من google gemini.py  # مدير روابط بنسخة Gemini
-    ├── برنامج المتوصط الحسابي.py      # برنامج المتوسط الحسابي
-    ├── برنامج حساب المسافة بالميل.py  # محوّل الميل إلى كيلومتر
-    ├── برنامج لحساب الضرائب.py        # برنامج حساب الضرائب
-    ├── برنامج لحساب درجات الطلاب .py  # برنامج درجات الطلاب
-    ├── data.txt                       # ملف بيانات الطلاب
-    └── table.txt                      # جدول الضرب المُولَّد
+├── code/
+│   ├── lecture2/
+│   ├── lecture3/
+│   ├── lecture4/
+│   ├── lecture5/
+│   ├── lecture6/
+│   ├── lecture7/
+│   ├── lecture8/
+│   ├── lecture9/
+│   ├── lecture10/
+│   └── sounds/
+├── apps/
+│   └── channel_name_gen/
+├── extra codes for all lectures/
+│   └── sounds/
+├── python extra files/
+├── suleimanAlQusaimiPythonCourse tested/
+│   └── sounds/
+└── README.md
 ```
 
----
+## Detailed Lesson Content
 
-## محتوى الدروس التفصيلي
+The course covers nine lectures, numbered 2 through 10. Each lecture introduces a set of programming concepts and ends with a final application that combines the new ideas with everything learned so far.
 
----
+### Lecture 2 — Printing Basics and Variables
 
-### الدرس 2 — أساسيات الطباعة والمتغيرات
+Concepts covered:
 
-**المفاهيم:**
-- أمر `print()` لطباعة النصوص والأرقام
-- دمج النصوص (Concatenation) باستخدام `+`
-- تعريف المتغيرات (Variables) وتخزين القيم
-- أمر `input()` لاستقبال إدخال المستخدم
-- تحويل النوع `int()` من نص إلى رقم
+- The `print()` function for displaying text and numbers.
+- String concatenation using the `+` operator.
+- Defining variables and storing values.
+- The `input()` function for receiving user input.
+- The `int()` type conversion from text to number.
 
-**ملفات الدرس:**
+Lesson files:
 
-| الملف | الوصف |
-|-------|-------|
-| `code/lecture2/code.py` | أمثلة الدرس الأساسية |
-| `code/lecture2/2.py` | ملاحظات تجريبية من الدرس |
-| `code/lecture2/welcome_add_amount.py` | **البرنامج النهائي:** يطلب الاسم والمبلغ ويضيف 5 |
-| `code/lecture2/guide.md` | دليل الدرس |
+| File | Description |
+| --- | --- |
+| `code/lecture2/code.py` | Core lesson examples. |
+| `code/lecture2/2.py` | Practice notes from the lesson. |
+| `code/lecture2/welcome_add_amount.py` | Final application: asks for a name and an amount, then adds 5. |
+| `code/lecture2/guide.md` | Lesson guide. |
 
----
+### Lecture 3 — Variables and Type Conversion
 
-### الدرس 3 — المتغيرات وتحويل الأنواع
+Concepts covered:
 
-**المفاهيم:**
-- أنواع البيانات: `str`, `int`, `float`
-- أمر `input()` واستقبال مدخلات المستخدم
-- تحويل الأنواع: `int()`, `float()`, `str()`
-- إجراء العمليات الحسابية مع متغيرات المستخدم
+- Data types: `str`, `int`, and `float`.
+- Receiving user input with `input()`.
+- Type conversion functions: `int()`, `float()`, `str()`.
+- Performing arithmetic operations on user input.
 
-**ملفات الدرس:**
+Lesson files:
 
-| الملف | الوصف |
-|-------|-------|
-| `code/lecture3/code.py` | أمثلة الدرس الأساسية |
-| `code/lecture3/3.py` | ملاحظات تجريبية من الدرس |
-| `code/lecture3/mile_to_km_converter.py` | **البرنامج النهائي:** محوّل الميل إلى كيلومتر |
-| `code/lecture3/guide.md` | دليل الدرس |
+| File | Description |
+| --- | --- |
+| `code/lecture3/code.py` | Core lesson examples. |
+| `code/lecture3/3.py` | Practice notes from the lesson. |
+| `code/lecture3/mile_to_km_converter.py` | Final application: a miles to kilometres converter. |
+| `code/lecture3/guide.md` | Lesson guide. |
 
----
+### Lecture 4 — Conditional Statements
 
-### الدرس 4 — الجمل الشرطية
+Concepts covered:
 
-**المفاهيم:**
-- جملة `if` الشرطية
-- `elif` لشروط متعددة
-- `else` للحالة الافتراضية
-- الشروط المتداخلة (Nested If)
-- المعاملات المنطقية: `and`, `or`, `not`
-- المعاملات المقارنة: `==`, `!=`, `>`, `<`, `>=`, `<=`
+- The `if` conditional statement.
+- The `elif` clause for multiple conditions.
+- The `else` clause for the default case.
+- Nested conditional statements.
+- Logical operators: `and`, `or`, `not`.
+- Comparison operators: `==`, `!=`, `>`, `<`, `>=`, `<=`.
 
-**ملفات الدرس:**
+Lesson files:
 
-| الملف | الوصف |
-|-------|-------|
-| `code/lecture4/code.py` | أمثلة الدرس الأساسية |
-| `code/lecture4/4.py` | ملاحظات تجريبية من الدرس |
-| `code/lecture4/grade_calculator.py` | **البرنامج النهائي:** حساب تقدير الطالب (A/B/C/راسب) |
-| `code/lecture4/guide.md` | دليل الدرس |
+| File | Description |
+| --- | --- |
+| `code/lecture4/code.py` | Core lesson examples. |
+| `code/lecture4/4.py` | Practice notes from the lesson. |
+| `code/lecture4/grade_calculator.py` | Final application: calculates a student grade as A, B, C, or fail. |
+| `code/lecture4/guide.md` | Lesson guide. |
 
----
+### Lecture 5 — Strings and String Operations
 
-### الدرس 5 — النصوص وعملياتها
+Concepts covered:
 
-**المفاهيم:**
-- دوال النصوص: `.upper()`, `.lower()`, `.capitalize()`, `.title()`
-- البحث والاستبدال: `.find()`, `.replace()`
-- الفهرسة (Indexing) والتقطيع (Slicing)
-- دالة `.isdigit()` للتحقق من نوع البيانات
-- تنسيق النصوص بـ f-strings
-- دالة `len()` لمعرفة الطول
+- String methods: `.upper()`, `.lower()`, `.capitalize()`, `.title()`.
+- Searching and replacing: `.find()`, `.replace()`.
+- Indexing and slicing strings.
+- The `.isdigit()` method for checking input type.
+- Formatting strings with f-strings.
+- The `len()` function for measuring string length.
 
-**ملفات الدرس:**
+Lesson files:
 
-| الملف | الوصف |
-|-------|-------|
-| `code/lecture5/code.py` | أمثلة الدرس الأساسية |
-| `code/lecture5/5.py` | ملاحظات تجريبية من الدرس |
-| `code/lecture5/5test.py` | تمارين إضافية على النصوص |
-| `code/lecture5/string_search.py` | **البرنامج النهائي:** بحث متقدم داخل نص |
-| `code/lecture5/guide.md` | دليل الدرس |
+| File | Description |
+| --- | --- |
+| `code/lecture5/code.py` | Core lesson examples. |
+| `code/lecture5/5.py` | Practice notes from the lesson. |
+| `code/lecture5/5test.py` | Additional string exercises. |
+| `code/lecture5/string_search.py` | Final application: an advanced text search program. |
+| `code/lecture5/guide.md` | Lesson guide. |
 
----
+### Lecture 6 — Lists
 
-### الدرس 6 — القوائم (Lists)
+Concepts covered:
 
-**المفاهيم:**
-- إنشاء القوائم والوصول إلى عناصرها بالفهرس
-- دوال القوائم: `.append()`, `.insert()`, `.remove()`, `.pop()`, `.sort()`, `.copy()`
-- الدوال المدمجة: `sum()`, `min()`, `max()`, `len()`
-- حلقة `for` للتكرار على القوائم
-- الفرق بين النسخ بالإشارة والنسخ الفعلي
+- Creating lists and accessing elements by index.
+- List methods: `.append()`, `.insert()`, `.remove()`, `.pop()`, `.sort()`, `.copy()`.
+- Built-in functions: `sum()`, `min()`, `max()`, `len()`.
+- Iterating over lists with `for` loops.
+- The difference between reference assignment and copying.
 
-**ملفات الدرس:**
+Lesson files:
 
-| الملف | الوصف |
-|-------|-------|
-| `code/lecture6/code.py` | أمثلة الدرس الأساسية |
-| `code/lecture6/6.py` | ملاحظات تجريبية من الدرس |
-| `code/lecture6/6test.py` | تمارين على المجموع والمتوسط والنسخ |
-| `code/lecture6/برنامج المتوصط الحسابي.py` | برنامج حساب المتوسط بالحلقة |
-| `code/lecture6/average_calculator.py` | **البرنامج النهائي:** حساب المتوسط الحسابي لـ 5 أرقام |
-| `code/lecture6/guide.md` | دليل الدرس |
+| File | Description |
+| --- | --- |
+| `code/lecture6/code.py` | Core lesson examples. |
+| `code/lecture6/6.py` | Practice notes from the lesson. |
+| `code/lecture6/6test.py` | Exercises on sum, average, and copying. |
+| `code/lecture6/average_calculator.py` | Final application: computes the arithmetic mean of five numbers. |
+| `code/lecture6/guide.md` | Lesson guide. |
 
----
+### Lecture 7 — Advanced Loops and Nested Lists
 
-### الدرس 7 — الحلقات المتقدمة والقوائم المتداخلة
+Concepts covered:
 
-**المفاهيم:**
-- القوائم المتداخلة (Nested Lists)
-- الأمر `break` لإيقاف الحلقة
-- الأمر `continue` لتخطي دورة
-- حلقة `while True` اللانهائية
-- `for...else` وحالة عدم الإيجاد
-- استيراد مكتبة `webbrowser`
+- Nested lists.
+- The `break` statement to exit a loop.
+- The `continue` statement to skip an iteration.
+- Infinite loops with `while True`.
+- The `for ... else` construct and the not-found case.
+- Importing the `webbrowser` module.
 
-**ملفات الدرس:**
+Lesson files:
 
-| الملف | الوصف |
-|-------|-------|
-| `code/lecture7/code.py` | أمثلة الدرس الأساسية |
-| `code/lecture7/7.py` | ملاحظات تجريبية من الدرس |
-| `code/lecture7/7test.py` | تمارين على الحلقات والبحث |
-| `code/lecture7/7test1.py` | تمارين إضافية |
-| `code/lecture7/student_grade_search.py` | **البرنامج النهائي:** نظام بحث عن درجات الطلاب |
-| `code/lecture7/guide.md` | دليل الدرس |
+| File | Description |
+| --- | --- |
+| `code/lecture7/code.py` | Core lesson examples. |
+| `code/lecture7/7.py` | Practice notes from the lesson. |
+| `code/lecture7/7test.py` | Exercises on loops and search. |
+| `code/lecture7/7test1.py` | Additional exercises. |
+| `code/lecture7/student_grade_search.py` | Final application: a student grade search system. |
+| `code/lecture7/guide.md` | Lesson guide. |
 
----
+### Lecture 8 — Modules and Random Numbers
 
-### الدرس 8 — المكتبات والأرقام العشوائية
+Concepts covered:
 
-**المفاهيم:**
-- مكتبة `random`: `randint()`, `choice()`
-- مكتبة `winsound` لتشغيل الأصوات (ويندوز)
-- حلقة `while` مع عداد المحاولات
-- منطق `while...else`
-- بناء الدوال الخاصة `def`
+- The `random` module: `randint()` and `choice()`.
+- The `winsound` module for playing sounds on Windows.
+- The `while` loop with an attempt counter.
+- The `while ... else` construct.
+- Defining custom functions with `def`.
 
-**ملفات الدرس:**
+Lesson files:
 
-| الملف | الوصف |
-|-------|-------|
-| `code/lecture8/code.py` | أمثلة الدرس الأساسية |
-| `code/lecture8/8.py` | ملاحظات تجريبية من الدرس |
-| `code/lecture8/8test.py` | تمارين على لعبة التخمين ومولد كلمات المرور |
-| `code/lecture8/Number Guessing Game.py` | لعبة تخمين الرقم مع أصوات |
-| `code/lecture8/password generator.py` | مولّد كلمات مرور عشوائية |
-| `code/lecture8/guess_game_and_password_generator.py` | **البرنامج النهائي:** اللعبة ومولد المرور مدمجَين |
-| `code/lecture8/guide.md` | دليل الدرس |
+| File | Description |
+| --- | --- |
+| `code/lecture8/code.py` | Core lesson examples. |
+| `code/lecture8/8.py` | Practice notes from the lesson. |
+| `code/lecture8/8test.py` | Exercises on the guessing game and the password generator. |
+| `code/lecture8/Number Guessing Game.py` | Number guessing game with sound effects. |
+| `code/lecture8/password generator.py` | Random password generator. |
+| `code/lecture8/guess_game_and_password_generator.py` | Final application: the guessing game and the password generator combined. |
+| `code/lecture8/guide.md` | Lesson guide. |
 
----
+### Lecture 9 — Functions, Dictionaries, and Error Handling
 
-### الدرس 9 — الدوال والقواميس ومعالجة الأخطاء
+Concepts covered:
 
-**المفاهيم:**
-- تعريف الدوال `def` وقيمة الإرجاع `return`
-- معالجة الأخطاء `try` / `except`
-- أنواع الأخطاء: `ZeroDivisionError`, `ValueError`, `KeyError`
-- القواميس (Dictionaries): الإنشاء، الإضافة، الحذف `.pop()`
-- تحويل مفاتيح القاموس إلى قائمة `list(urls.keys())`
-- مكتبة `webbrowser` لفتح الروابط
+- Defining functions with `def` and returning values with `return`.
+- Error handling with `try` and `except`.
+- Common exceptions: `ZeroDivisionError`, `ValueError`, `KeyError`.
+- Dictionaries: creation, adding entries, removing entries with `.pop()`.
+- Converting dictionary keys to a list with `list(urls.keys())`.
+- The `webbrowser` module for opening URLs.
 
-**ملفات الدرس:**
+Lesson files:
 
-| الملف | الوصف |
-|-------|-------|
-| `code/lecture9/code.py` | أمثلة الدرس الأساسية |
-| `code/lecture9/9.py` | ملاحظات تجريبية من الدرس |
-| `code/lecture9/9test.py` | تمارين إضافية |
-| `code/lecture9/test.py` | تمارين على دالة المتوسط |
-| `code/lecture9/9test from chat gpt.py` | مقارنة: نسخة ChatGPT |
-| `code/lecture9/9test from manus ai.py` | مقارنة: نسخة Manus AI |
-| `code/lecture9/9test from sky work ai.py` | مقارنة: نسخة SkyWork AI |
-| `code/lecture9/Calculate Average Using Function.py` | حساب المتوسط باستخدام دالة |
-| `code/lecture9/simple Calculator.py` | الآلة الحاسبة البسيطة (نسخة 1) |
-| `code/lecture9/آلة حاسبة معدلة خالية من الأخطاء .py` | الآلة الحاسبة المحسّنة (نسخة 2) |
-| `code/lecture9/linkDictionary.py` | قاموس الروابط الأساسي |
-| `code/lecture9/linkManager_v1.py` | مدير الروابط الإصدار الأول |
-| `code/lecture9/smartLinkManagev2.py` | مدير الروابط الذكي الإصدار الثاني |
-| `code/lecture9/مدير الروابط مصمم من google gemini.py` | مدير روابط بنسخة Gemini |
-| `code/lecture9/url_manager.py` | **البرنامج النهائي:** مخزن الروابط التفاعلي |
-| `code/lecture9/guide.md` | دليل الدرس |
+| File | Description |
+| --- | --- |
+| `code/lecture9/code.py` | Core lesson examples. |
+| `code/lecture9/9.py` | Practice notes from the lesson. |
+| `code/lecture9/9test.py` | Additional exercises. |
+| `code/lecture9/test.py` | Exercises on the average function. |
+| `code/lecture9/9test from chat gpt.py` | Comparison version produced with ChatGPT. |
+| `code/lecture9/9test from manus ai.py` | Comparison version produced with Manus AI. |
+| `code/lecture9/9test from sky work ai.py` | Comparison version produced with SkyWork AI. |
+| `code/lecture9/Calculate Average Using Function.py` | Computing the average using a function. |
+| `code/lecture9/simple Calculator.py` | Simple calculator, version 1. |
+| `code/lecture9/linkDictionary.py` | Basic links dictionary. |
+| `code/lecture9/linksDictionary.py` | Alternative links dictionary implementation. |
+| `code/lecture9/linkManager_v1.py` | Link manager, version 1. |
+| `code/lecture9/smartLinkManagev2.py` | Smart link manager, version 2. |
+| `code/lecture9/url_manager.py` | Final application: the interactive URL manager. |
+| `code/lecture9/guide.md` | Lesson guide. |
 
----
+### Lecture 10 — Working with Files
 
-### الدرس 10 — التعامل مع الملفات
+Concepts covered:
 
-**المفاهيم:**
-- فتح الملفات بـ `open()`
-- وضع الكتابة `"w"` ووضع الإلحاق `"a"` ووضع القراءة `"r"`
-- دوال القراءة: `read()`, `readline()`, `readlines()`
-- تحريك المؤشر بـ `seek()`
-- إغلاق الملفات بـ `close()`
-- دعم اللغة العربية بـ `encoding="utf-8"`
-- بناء تطبيقات حقيقية تقرأ البيانات من ملفات
+- Opening files with `open()`.
+- File modes: write `"w"`, append `"a"`, and read `"r"`.
+- Reading methods: `read()`, `readline()`, `readlines()`.
+- Moving the file pointer with `seek()`.
+- Closing files with `close()`.
+- Arabic language support with `encoding="utf-8"`.
+- Building real applications that read data from files.
 
-**ملفات الدرس:**
+Lesson files:
 
-| الملف | الوصف |
-|-------|-------|
-| `code/lecture10/code.py` | أمثلة الدرس الأساسية |
-| `code/lecture10/10.py` | ملاحظات تجريبية من الدرس |
-| `code/lecture10/multiplication_table.py` | كتابة جدول الضرب إلى ملف |
-| `code/lecture10/student_grades.py` | قراءة درجات الطلاب من ملف |
-| `code/lecture10/diary_system.py` | **البرنامج النهائي:** نظام المذكرات اليومية |
-| `code/lecture10/grades_data.txt` | بيانات الطلاب (يستخدمها student_grades.py) |
-| `code/lecture10/data.txt` | ملف بيانات تجريبي لتمارين الدرس |
-| `code/lecture10/table.txt` | جدول الضرب المُولَّد |
-| `code/lecture10/guide.md` | دليل الدرس |
+| File | Description |
+| --- | --- |
+| `code/lecture10/code.py` | Core lesson examples. |
+| `code/lecture10/10.py` | Practice notes from the lesson. |
+| `code/lecture10/multiplication_table.py` | Writes a multiplication table to a file. |
+| `code/lecture10/student_grades.py` | Reads student grades from a file. |
+| `code/lecture10/diary_system.py` | Final application: the daily diary system. |
+| `code/lecture10/grades_data.txt` | Student data used by `student_grades.py`. |
+| `code/lecture10/data.txt` | Sample data file for lesson exercises. |
+| `code/lecture10/table.txt` | The generated multiplication table. |
+| `code/lecture10/guide.md` | Lesson guide. |
 
----
+## Independent Applications
 
-## التطبيقات المستقلة (مجلد apps)
+The `apps/` folder contains standalone programs that were built during and after the course.
 
-يحتوي هذا المجلد على برامج تطبيقية مستقلة تم بناؤها خلال الدورة وبعدها.
+### Channel Name Generator
 
----
+A multi-file project that generates creative YouTube channel names in Arabic and English.
 
-### مولّد أسماء القنوات
-
-مشروع متكامل متعدد الملفات يُولّد أسماء إبداعية لقنوات يوتيوب بالعربية والإنجليزية.
-
-```
+```text
 apps/channel_name_gen/
-├── generator.py      # المحرك الأساسي لتوليد الأسماء
-├── cli.py            # واجهة سطر الأوامر
-└── __init__.py       # تهيئة الحزمة
+├── generator.py
+├── cli.py
+└── __init__.py
 ```
 
-طريقة الاستخدام:
+Usage example:
+
 ```bash
 python apps/channel_name_gen/cli.py -n 5 -l ar -s kebab
 ```
 
-الخيارات:
-| الخيار | الوصف |
-|--------|-------|
-| `-n` | عدد الأسماء المطلوب توليدها |
-| `-l ar` أو `-l en` | اللغة (عربي أو إنجليزي) |
-| `-s kebab/snake/camel/plain` | نمط تنسيق الاسم |
-| `--number` | إضافة رقم عشوائي للاسم |
+Available command line options:
 
----
+| Option | Description |
+| --- | --- |
+| `-n` | The number of names to generate. |
+| `-l ar` or `-l en` | Output language: Arabic or English. |
+| `-s kebab`, `-s snake`, `-s camel`, `-s plain` | Naming style for the generated name. |
+| `--number` | Append a random number to the generated name. |
 
-### برامج تطبيقية أخرى
+### Other Standalone Programs
 
-| الملف | الوصف |
-|-------|-------|
-| `apps/file_operations.py` | عمليات الملفات: كتابة، إلحاق، قراءة مع دعم UTF-8 |
-| `apps/multiplication_table.py` | جدول الضرب الكامل (كتابة إلى ملف table.txt) |
-| `apps/student_grades.py` | قراءة درجات الطلاب من ملف وحساب المتوسط |
-| `apps/Number Guessing Game.py` | لعبة تخمين الرقم مع أصوات |
-| `apps/password generator.py` | مولّد كلمات مرور عشوائية |
-| `apps/Calculate Average Using Function.py` | حساب المتوسط باستخدام دالة |
-| `apps/simple Calculator.py` | آلة حاسبة بسيطة |
-| `apps/آلة حاسبة معدلة خالية من الأخطاء .py` | آلة حاسبة محسّنة مع معالجة الأخطاء |
-| `apps/linkDictionary.py` | قاموس الروابط |
-| `apps/linkManager_v1.py` | مدير الروابط الإصدار الأول |
-| `apps/smartLinkManagev2.py` | مدير الروابط الذكي الإصدار الثاني |
-| `apps/مدير الروابط مصمم من google gemini.py` | مدير روابط بنسخة Google Gemini |
-| `apps/برنامج المتوصط الحسابي.py` | برنامج حساب المتوسط الحسابي |
-| `apps/برنامج حساب المسافة بالميل.py` | محوّل المسافة من ميل إلى كيلومتر |
-| `apps/برنامج لحساب الضرائب.py` | برنامج حساب الضرائب |
-| `apps/برنامج لحساب درجات الطلاب .py` | برنامج حساب درجات الطلاب |
+| File | Description |
+| --- | --- |
+| `apps/file_operations.py` | File operations: write, append, and read with UTF-8 support. |
+| `apps/multiplication_table.py` | Full multiplication table written to `table.txt`. |
+| `apps/student_grades.py` | Reads student grades from a file and computes the average. |
+| `apps/Number Guessing Game.py` | Number guessing game with sound effects. |
+| `apps/password generator.py` | Random password generator. |
+| `apps/Calculate Average Using Function.py` | Average computation using a function. |
+| `apps/simple Calculator.py` | Simple calculator. |
+| `apps/linkDictionary.py` | Links dictionary. |
+| `apps/linkManager_v1.py` | Link manager, version 1. |
+| `apps/smartLinkManagev2.py` | Smart link manager, version 2. |
 
----
+The `apps/` folder also contains several Arabic-named utility programs covering an improved error-free calculator, a Gemini-based link manager, an arithmetic average program, a miles-to-kilometres distance converter, a tax calculation program, and a student grades program. These files keep their original Arabic names so that they match the course materials.
 
-## ملفات بايثون الإضافية (مجلد python extra files)
+## Extra Python Files
 
-يحتوي هذا المجلد على ملفات ملخصات ومراجع نصية مكتوبة لمحتوى الدورة، بالإضافة إلى ملف الأصوات المضغوط.
+The `python extra files/` folder contains written summaries, reference notes, and supporting resources.
 
-| الملف | الوصف |
-|-------|-------|
-| `link store.txt` | قائمة روابط مرجعية محفوظة |
-| `دوال القوائم.txt` | ملخص نصي لدوال القوائم |
-| `ملخص الدرس 8[12274].txt` | ملخص الدرس الثامن — المكتبات والأرقام العشوائية |
-| `ملخص الدرس التاسع - الدوالي و القواميس .txt` | ملخص الدرس التاسع — الدوال والقواميس |
-| `ملخص الدرس السابع - مواصلة لحلقة forو while و مقدمة عن المكتبات.txt` | ملخص الدرس السابع — الحلقات المتقدمة |
-| `ملخص كتابي للدرس السادس - القوائم و الحلقات التكرارية.txt` | ملخص الدرس السادس — القوائم |
-| `موجز لدرس النصوص (1).txt` | ملخص درس النصوص |
-| `sounds.rar` | أرشيف الملفات الصوتية المستخدمة في الدورة |
+| File | Description |
+| --- | --- |
+| `link store.txt` | Saved reference links. |
+| `دوال القوائم.txt` | Written summary of list methods. |
+| `ملخص الدرس 8[12274].txt` | Summary of lecture 8 — modules and random numbers. |
+| `ملخص الدرس التاسع - الدوالي و القواميس .txt` | Summary of lecture 9 — functions and dictionaries. |
+| `ملخص الدرس السابع - مواصلة لحلقة forو while و مقدمة عن المكتبات.txt` | Summary of lecture 7 — advanced loops and an introduction to modules. |
+| `ملخص كتابي للدرس السادس - القوائم و الحلقات التكرارية.txt` | Summary of lecture 6 — lists and iteration. |
+| `موجز لدرس النصوص (1).txt` | Summary of the strings lesson. |
+| `sounds.rar` | Archive of the audio files used in the course. |
 
----
+## Extra Codes for All Lectures
 
-## الأكواد الإضافية لجميع المحاضرات
+The `extra codes for all lectures/` folder contains a flat collection of all lecture code files in one place for quick review, along with test files and experiments.
 
-مجلد `extra codes for all lectures/` يحتوي على نسخة مجمّعة من أكواد جميع المحاضرات في مكان واحد للمراجعة السريعة، بالإضافة إلى ملفات الاختبار والتجارب.
+| File | Lecture |
+| --- | --- |
+| `2.py` | Lecture 2. |
+| `3.py` | Lecture 3. |
+| `4.py` | Lecture 4. |
+| `5.py` | Lecture 5. |
+| `5test.py` | Lecture 5 exercises. |
+| `6.py` | Lecture 6. |
+| `6test.py` | Lecture 6 exercises. |
+| `7.py` | Lecture 7. |
+| `7test.py` | Lecture 7 exercises. |
+| `7test1.py` | Additional lecture 7 exercises. |
+| `8.py` | Lecture 8. |
+| `8test.py` | Lecture 8 exercises. |
+| `9.py` | Lecture 9. |
+| `9test.py` | Lecture 9 exercises. |
+| `9test from chat gpt.py` | Lecture 9 ChatGPT comparison. |
+| `9test from manus ai.py` | Lecture 9 Manus AI comparison. |
+| `9test from sky work ai.py` | Lecture 9 SkyWork AI comparison. |
+| `10.py` | Lecture 10. |
+| `test.py` | General test file. |
+| `test1.py` | Additional test file. |
+| `test2.py` | Additional test file. |
+| `data.txt` | Sample data file. |
+| `sounds/` | Audio files used by the lecture programs. |
 
-| الملف | المحاضرة |
-|-------|----------|
-| `2.py` | الدرس الثاني |
-| `3.py` | الدرس الثالث |
-| `4.py` | الدرس الرابع |
-| `5.py` | الدرس الخامس |
-| `5test.py` | تمارين الدرس الخامس |
-| `6.py` | الدرس السادس |
-| `6test.py` | تمارين الدرس السادس |
-| `7.py` | الدرس السابع |
-| `7test.py` | تمارين الدرس السابع |
-| `7test1.py` | تمارين إضافية للدرس السابع |
-| `8.py` | الدرس الثامن |
-| `8test.py` | تمارين الدرس الثامن |
-| `9.py` | الدرس التاسع |
-| `9test.py` | تمارين الدرس التاسع |
-| `10.py` | الدرس العاشر |
-| `test.py` | ملف اختبار عام |
+## Tested Code Folder
 
----
+The `suleimanAlQusaimiPythonCourse tested/` folder contains tested and revised versions of the lecture code together with the final applications produced from each lecture. It is intended as a clean, verified reference set.
 
-## كيفية تشغيل البرامج
+| File | Description |
+| --- | --- |
+| `1.py` | Introductory test file. |
+| `2.py` | Tested code for lecture 2. |
+| `3.py` | Tested code for lecture 3. |
+| `4.py` | Tested code for lecture 4. |
+| `5.py` | Tested code for lecture 5. |
+| `5test.py` | Lecture 5 exercises. |
+| `6.py` | Tested code for lecture 6. |
+| `7.py` | Tested code for lecture 7. |
+| `8.py` | Tested code for lecture 8. |
+| `9.py` | Tested code for lecture 9. |
+| `final_appfor5.py` | Final application for lecture 5. |
+| `final_app_for_6.py` | Final application for lecture 6. |
+| `final_app_for_7.py` | Final application for lecture 7. |
+| `final_app_number _guessing _game_for_8.py` | Number guessing game final application for lecture 8. |
+| `final_app_password_generator_for_8.py` | Password generator final application for lecture 8. |
+| `final_app_Custom Length Calculator_for8.py` | Custom length calculator final application for lecture 8. |
+| `final_app_Calculate Average_Using _Function_for9.py` | Calculate average using function final application for lecture 9. |
+| `final_app_Zero_Crash_Calculator_for9.py` | Zero crash calculator final application for lecture 9. |
+| `final_app_links_Dictionary_for _9.py` | Links dictionary final application for lecture 9. |
+| `final_app_smart_link_manager_v1_for_9.py` | Smart link manager version 1 final application for lecture 9. |
+| `final_app_smart_link_manager_v2_for_9.py` | Smart link manager version 2 final application for lecture 9. |
+| `sounds/` | Audio files used by the tested programs. |
+| `.vscode/` | Visual Studio Code workspace settings. |
 
-### المتطلبات
-- Python 3.8 أو أحدث
-  - [ويندوز 32 بت](https://www.python.org/ftp/python/3.9.9/python-3.9.9.exe)
-  - [ويندوز 64 بت](https://www.python.org/ftp/python/3.9.9/python-3.9.9-amd64.exe)
-- قارئ شاشة NVDA (لمستخدمي ويندوز)
-- محرر نصوص يدعم إمكانية الوصول مثل VS Code
+## How to Run the Programs
 
-### تشغيل برامج المحاضرات
+### Requirements
+
+- Python 3.8 or later. Download from [python.org/downloads](https://www.python.org/downloads/).
+- A screen reader. Recommended options:
+  - NVDA on Windows. Download from [nvaccess.org](https://www.nvaccess.org/download/).
+  - Orca on Linux.
+- An accessible text editor. Visual Studio Code is recommended. Download from [code.visualstudio.com](https://code.visualstudio.com/).
+
+### Running Lecture Programs
+
+The following commands run the final application of selected lectures.
+
 ```bash
-# مثال: تشغيل محوّل الميل (الدرس 3)
 python code/lecture3/mile_to_km_converter.py
-
-# مثال: تشغيل حاسبة الدرجات (الدرس 4)
 python code/lecture4/grade_calculator.py
-
-# مثال: تشغيل لعبة التخمين (الدرس 8)
 python "code/lecture8/Number Guessing Game.py"
-
-# مثال: تشغيل مدير الروابط (الدرس 9)
 python code/lecture9/url_manager.py
-
-# مثال: تشغيل نظام المذكرات (الدرس 10)
 python code/lecture10/diary_system.py
 ```
 
-### تشغيل التطبيقات المستقلة
+### Running the Independent Applications
+
 ```bash
-# عمليات الملفات
 python apps/file_operations.py
-
-# جدول الضرب
 python apps/multiplication_table.py
-
-# درجات الطلاب
 python apps/student_grades.py
-
-# لعبة التخمين
 python "apps/Number Guessing Game.py"
 ```
 
-### ملاحظة مهمة للملفات الصوتية
-برنامج لعبة التخمين يستخدم ملفات صوتية موجودة في `code/sounds/`.
-شغّل البرنامج من مجلد `code/` لتعمل الأصوات بشكل صحيح:
+### Important Note About Sound Files
+
+The number guessing game uses audio files located in `code/sounds/`. Run the program from inside the `code/` folder so that the relative paths to the audio files resolve correctly:
+
 ```bash
 cd code
 python "lecture8/Number Guessing Game.py"
 ```
 
----
+## Course Progression Table
 
-## جدول تطور الدورة
+| Lecture | Topic | New Concept | Final Application |
+| --- | --- | --- | --- |
+| 2 | Printing and variables | `print()`, `input()`, `int()` | Welcome and add an amount. |
+| 3 | Data types | `float()`, arithmetic operations | Miles to kilometres converter. |
+| 4 | Conditionals | `if` / `elif` / `else` | Grade calculator. |
+| 5 | Strings | Slicing, `find()`, f-strings | Text search program. |
+| 6 | Lists | `append()`, `sort()`, `sum()` | Average calculator. |
+| 7 | Advanced loops | `break`, `continue`, `while True` | Student grade search. |
+| 8 | Modules | `random`, `winsound` | Number guessing game and password generator. |
+| 9 | Functions and dictionaries | `def`, `try` / `except`, `dict` | URL manager. |
+| 10 | File handling | `open()`, `read()`, `write()` | Daily diary system. |
 
-| الدرس | الموضوع | المفهوم الجديد | البرنامج النهائي |
-|-------|---------|----------------|-----------------|
-| 2 | الطباعة والمتغيرات | `print()`, `input()`, `int()` | ترحيب وإضافة مبلغ |
-| 3 | أنواع البيانات | `float()`, العمليات الحسابية | محوّل الميل |
-| 4 | الشروط | `if / elif / else` | حاسبة الدرجات |
-| 5 | النصوص | Slicing, `find()`, f-strings | البحث في النصوص |
-| 6 | القوائم | `append()`, `sort()`, `sum()` | حاسبة المتوسط |
-| 7 | الحلقات المتقدمة | `break`, `continue`, `while True` | بحث درجات الطلاب |
-| 8 | المكتبات | `random`, `winsound` | لعبة التخمين + مولد المرور |
-| 9 | الدوال والقواميس | `def`, `try/except`, `dict` | مدير الروابط |
-| 10 | الملفات | `open()`, `read()`, `write()` | نظام المذكرات |
+## Target Audience
 
----
+This course is designed for:
 
-## الفئة المستهدفة
+- Blind and visually impaired learners who want to learn programming.
+- Arabic speakers who are beginners in the Python ecosystem.
+- Screen reader users on Windows with NVDA, or on Linux with Orca.
 
-هذه الدورة مُصمَّمة لـ:
-- **المكفوفين وضعاف البصر** الراغبين في تعلم البرمجة
-- **المتحدثين بالعربية** المبتدئين في عالم Python
-- **مستخدمي قارئات الشاشة** (NVDA على ويندوز — Orca على لينكس)
+## Instructor
 
----
+Suleiman Al-Qusaimi is the course instructor and a specialist in teaching programming to blind learners. The course is published on the Ali Al-Amri YouTube channel.
 
-## المدرب
+## Repository Owner
 
-**سليمان القسيمي**
-مدرب متخصص في تعليم البرمجة للمكفوفين
-**المنصة:** قناة [علي العَمْري](https://www.youtube.com/channel/UCJ5ZOAk407kGlGWG_029CNQ) على يوتيوب
+Mahmoud Shaabo, a web development trainee at CodeYourFuture, Sheffield.
 
----
+## How to Contribute and Accept Pull Requests
 
-## صاحب المستودع
+### What is a Pull Request?
 
-**محمود شعبو**
-متدرب تطوير ويب — CodeYourFuture، شيفيلد
+A pull request is a GitHub mechanism that allows any contributor to propose changes to the repository. The repository owner can review the proposed changes and either merge them into the main branch or close the pull request without merging.
 
----
+### Steps to Review and Merge a Pull Request into the Main Branch
 
-## كيفية المساهمة وقبول طلبات السحب (Pull Requests)
+1. Open the repository page on GitHub at [mahmoudshaabo1984/suleimanAlQusaimiPythonCourse](https://github.com/mahmoudshaabo1984/suleimanAlQusaimiPythonCourse).
+2. Select the Pull requests tab to see the list of open pull requests.
+3. Open the pull request you want to review. Read the description of the proposed changes, then select the Files changed tab to review the modified code.
+4. Optionally add a comment to discuss the proposed changes with the contributor.
+5. If the changes are acceptable, select the Merge pull request button, then select Confirm merge to merge the changes into the `main` branch.
+6. Optionally, delete the source branch after merging by selecting the Delete branch button.
 
-### ما هو طلب السحب (Pull Request)؟
-طلب السحب هو آلية GitHub تتيح لأي مساهم اقتراح تغييرات على المستودع. يمكن لصاحب المستودع مراجعة هذه التغييرات ثم قبولها (دمجها) أو رفضها.
-
-### خطوات قبول طلب سحب ودمجه في الفرع الرئيسي:
-
-1. **افتح صفحة المستودع على GitHub**
-   - انتقل إلى `https://github.com/mahmoudshaabo1984/suleimanAlQusaimiPythonCourse`
-
-2. **انقر على تبويب "Pull requests"**
-   - ستجد قائمة بجميع طلبات السحب المفتوحة
-
-3. **افتح طلب السحب المطلوب**
-   - اقرأ وصف التغييرات المقترحة
-   - راجع الكود المُعدَّل بالنقر على تبويب "Files changed"
-
-4. **إضافة تعليق (اختياري)**
-   - إذا أردت مناقشة التغييرات مع المساهم، اكتب تعليقاً في مربع التعليقات
-
-5. **دمج طلب السحب**
-   - إذا كانت التغييرات مناسبة، انقر على زر **"Merge pull request"** الأخضر
-   - ثم انقر على **"Confirm merge"** لتأكيد الدمج في الفرع الرئيسي (`main`)
-
-6. **حذف الفرع (اختياري)**
-   - بعد الدمج، يمكنك حذف الفرع الفرعي بالنقر على **"Delete branch"**
-
-> **ملاحظة:** للتحقق من وجود طلبات سحب معلّقة، افتح صفحة المستودع على GitHub وانقر على تبويب **"Pull requests"**. إذا كانت القائمة فارغة، فهذا يعني أنه لا توجد طلبات سحب مفتوحة حالياً. تأكد من أن المساهم قد أرسل طلب السحب بالفعل وأن الرابط الصحيح للمستودع قد استُخدم.
+If the Pull requests list is empty, there are no open pull requests at the moment. Make sure the contributor has actually submitted a pull request and that the correct repository URL is being used.
 
 ---
 
-*هذا المستودع يوثّق رحلة تعلم شخصية في لغة Python مع التركيز على إمكانية الوصول كأولوية أساسية.*
+This repository documents a personal Python learning journey with accessibility for blind and visually impaired learners as a primary design goal.
