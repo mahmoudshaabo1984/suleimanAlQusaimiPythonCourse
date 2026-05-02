@@ -23,6 +23,7 @@ If you find any section that is difficult to navigate with a screen reader, plea
 - [Extra Python Files](#extra-python-files)
 - [Extra Codes for All Lectures](#extra-codes-for-all-lectures)
 - [Tested Code Folder](#tested-code-folder)
+- [Project Configuration Files](#project-configuration-files)
 - [How to Run the Programs](#how-to-run-the-programs)
 - [Course Progression Table](#course-progression-table)
 - [Target Audience](#target-audience)
@@ -64,12 +65,20 @@ suleimanAlQusaimiPythonCourse/
 │   ├── lecture10/
 │   └── sounds/
 ├── apps/
-│   └── channel_name_gen/
 ├── extra_codes_for_all_lectures/
 │   └── sounds/
 ├── python_extra_files/
 ├── suleimanAlQusaimiPythonCourse tested/
 │   └── sounds/
+├── .github/
+│   └── workflows/
+│       └── python-tests.yml
+├── .gitignore
+├── CODE_OF_CONDUCT.md
+├── CONTRIBUTING.md
+├── LICENSE
+├── requirements.txt
+├── setup.py
 └── README.md
 ```
 
@@ -280,33 +289,7 @@ Lesson files:
 
 The `apps/` folder contains standalone programs that were built during and after the course.
 
-### Channel Name Generator
-
-A multi-file project that generates creative YouTube channel names in Arabic and English.
-
-```text
-apps/channel_name_gen/
-├── generator.py
-├── cli.py
-└── __init__.py
-```
-
-Usage example:
-
-```bash
-python apps/channel_name_gen/cli.py -n 5 -l ar -s kebab
-```
-
-Available command line options:
-
-| Option | Description |
-| --- | --- |
-| `-n` | The number of names to generate. |
-| `-l ar` or `-l en` | Output language: Arabic or English. |
-| `-s kebab`, `-s snake`, `-s camel`, `-s plain` | Naming style for the generated name. |
-| `--number` | Append a random number to the generated name. |
-
-### Other Standalone Programs
+### Standalone Programs
 
 | File | Description |
 | --- | --- |
@@ -397,6 +380,20 @@ The `suleimanAlQusaimiPythonCourse tested/` folder contains tested and revised v
 | `final_app_smart_link_manager_v2_for_9.py` | Smart link manager version 2 final application for lecture 9. |
 | `sounds/` | Audio files used by the tested programs. |
 | `.vscode/` | Visual Studio Code workspace settings. |
+
+## Project Configuration Files
+
+The following files were added to the repository root to follow open-source best practices and improve the accessibility of the project for contributors.
+
+| File | Description |
+| --- | --- |
+| `.gitignore` | Excludes Python cache files, virtual environments, and OS-specific files from Git tracking. |
+| `requirements.txt` | Documents all modules used in the course. The course uses the Python standard library only; no third-party installation is required. |
+| `LICENSE` | MIT licence allowing free use, sharing, and adaptation of the course materials with attribution. |
+| `CONTRIBUTING.md` | Guidelines for contributors, including naming conventions, code style, and accessibility requirements. |
+| `CODE_OF_CONDUCT.md` | Community standards for contributors, with a specific commitment to accessibility for blind and visually impaired users. |
+| `setup.py` | Project metadata for the course repository. |
+| `.github/workflows/python-tests.yml` | GitHub Actions workflow that automatically checks Python syntax on every push or pull request. |
 
 ## How to Run the Programs
 
