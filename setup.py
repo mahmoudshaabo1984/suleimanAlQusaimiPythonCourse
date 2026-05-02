@@ -1,11 +1,11 @@
 """
-setup.py - Package configuration for suleimanAlQusaimi Python Course
+setup.py - Project metadata for suleimanAlQusaimi Python Course
 
-This file makes the course's reusable components installable as a Python package.
-Run: pip install -e .
+This file documents the course project metadata.
+The course materials consist of standalone Python scripts (no installable package).
 """
 
-from setuptools import setup, find_packages
+from setuptools import setup
 
 setup(
     name="suleiman-alqusaimi-python-course",
@@ -29,8 +29,7 @@ setup(
             "suleimanAlQusaimiPythonCourse"
         ),
     },
-    packages=find_packages(where="apps"),
-    package_dir={"": "apps"},
+    packages=[],
     python_requires=">=3.8",
     install_requires=[],
     extras_require={
@@ -45,7 +44,6 @@ setup(
         "Intended Audience :: Education",
         "Intended Audience :: End Users/Desktop",
         "Topic :: Education",
-        "Topic :: Software Development :: Libraries :: Python Modules",
         "License :: OSI Approved :: MIT License",
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.8",
@@ -67,9 +65,4 @@ setup(
         "arabic",
         "beginner",
     ],
-    entry_points={
-        "console_scripts": [
-            "channel-name-gen=channel_name_gen.cli:main",
-        ],
-    },
 )
