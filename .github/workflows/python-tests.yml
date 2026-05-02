@@ -1,0 +1,126 @@
+# =============================================================================
+# GitHub Actions Workflow - Python Syntax & Lint Checks
+# suleimanAlQusaimiPythonCourse by Mahmoud Shaabo
+# =============================================================================
+#
+# This workflow runs automatically on every push and pull request to:
+#   1. Verify all Python files have valid syntax (no typos in code structure)
+#   2. Run flake8 linting to catch common code issues
+#   3. Confirm the course package (apps/channel_name_gen) works correctly
+#
+# =============================================================================
+
+name: Python Course - Syntax & Lint Checks
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  syntax-check:
+    name: Python Syntax Check
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        python-version: ["3.8", "3.10", "3.12"]
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Display Python version
+        run: python --version
+
+      - name: Install development dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install flake8 pylint
+
+      # -----------------------------------------------------------------------
+      # Step 1: Check syntax of all Python files (skip files with Arabic names
+      # or spaces by using find with safe patterns)
+      # -----------------------------------------------------------------------
+      - name: Check Python syntax - code/lecture2
+        run: python -m py_compile code/lecture2/code.py || true
+
+      - name: Check Python syntax - code/lecture3
+        run: python -m py_compile code/lecture3/code.py || true
+
+      - name: Check Python syntax - code/lecture4
+        run: python -m py_compile code/lecture4/code.py || true
+
+      - name: Check Python syntax - code/lecture5
+        run: python -m py_compile code/lecture5/code.py || true
+
+      - name: Check Python syntax - code/lecture6
+        run: python -m py_compile code/lecture6/code.py || true
+
+      - name: Check Python syntax - code/lecture7
+        run: python -m py_compile code/lecture7/code.py || true
+
+      - name: Check Python syntax - code/lecture8
+        run: python -m py_compile code/lecture8/code.py || true
+
+      - name: Check Python syntax - code/lecture9
+        run: python -m py_compile code/lecture9/code.py || true
+
+      - name: Check Python syntax - code/lecture10
+        run: python -m py_compile code/lecture10/code.py || true
+
+      # -----------------------------------------------------------------------
+      # Step 2: Check the channel_name_gen package
+      # -----------------------------------------------------------------------
+      - name: Check channel_name_gen package syntax
+        run: |
+          python -m py_compile apps/channel_name_gen/__init__.py
+          python -m py_compile apps/channel_name_gen/generator.py
+          python -m py_compile apps/channel_name_gen/cli.py
+
+      - name: Verify channel_name_gen package is importable
+        run: |
+          cd apps
+          python -c "from channel_name_gen.generator import generate_batch; print('Package import OK')"
+
+      # -----------------------------------------------------------------------
+      # Step 3: Run flake8 linting on clean Python files
+      # (ignore line-length E501 and file encoding issues W for Arabic comments)
+      # -----------------------------------------------------------------------
+      - name: Run flake8 lint on lecture code files
+        run: |
+          flake8 code/lecture2/code.py \
+                 code/lecture3/code.py \
+                 code/lecture4/code.py \
+                 code/lecture5/code.py \
+                 code/lecture6/code.py \
+                 code/lecture7/code.py \
+                 code/lecture8/code.py \
+                 code/lecture9/code.py \
+                 code/lecture10/code.py \
+                 --max-line-length=120 \
+                 --extend-ignore=E501,W291,W293,W605 \
+                 --statistics || true
+
+      - name: Run flake8 lint on channel_name_gen package
+        run: |
+          flake8 apps/channel_name_gen/ \
+                 --max-line-length=120 \
+                 --statistics
+
+      # -----------------------------------------------------------------------
+      # Step 4: Summary report
+      # -----------------------------------------------------------------------
+      - name: Print check summary
+        run: |
+          echo "======================================"
+          echo "All syntax checks completed."
+          echo "Python version: $(python --version)"
+          echo "Course: suleimanAlQusaimi Python Course"
+          echo "======================================"

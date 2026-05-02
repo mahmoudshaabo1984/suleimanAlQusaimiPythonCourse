@@ -44,8 +44,8 @@ The repository is organised into five main top-level folders:
 
 - `code/` — lesson source code, organised by lecture number from lecture 2 to lecture 10, plus a shared `sounds/` folder.
 - `apps/` — independent standalone applications built during and after the course.
-- `extra codes for all lectures/` — a flat collection of all lecture code files in one place for quick review.
-- `python extra files/` — written summaries, references, and extra resources.
+- `extra_codes_for_all_lectures/` — a flat collection of all lecture code files in one place for quick review.
+- `python_extra_files/` — written summaries, references, and extra resources.
 - `suleimanAlQusaimiPythonCourse tested/` — a separate folder containing tested and revised versions of the lecture code and the final applications.
 
 A high level tree view of the repository is shown below.
@@ -65,9 +65,9 @@ suleimanAlQusaimiPythonCourse/
 │   └── sounds/
 ├── apps/
 │   └── channel_name_gen/
-├── extra codes for all lectures/
+├── extra_codes_for_all_lectures/
 │   └── sounds/
-├── python extra files/
+├── python_extra_files/
 ├── suleimanAlQusaimiPythonCourse tested/
 │   └── sounds/
 └── README.md
@@ -325,7 +325,7 @@ The `apps/` folder also contains several Arabic-named utility programs covering 
 
 ## Extra Python Files
 
-The `python extra files/` folder contains written summaries, reference notes, and supporting resources.
+The `python_extra_files/` folder contains written summaries, reference notes, and supporting resources.
 
 | File | Description |
 | --- | --- |
@@ -340,7 +340,7 @@ The `python extra files/` folder contains written summaries, reference notes, an
 
 ## Extra Codes for All Lectures
 
-The `extra codes for all lectures/` folder contains a flat collection of all lecture code files in one place for quick review, along with test files and experiments.
+The `extra_codes_for_all_lectures/` folder contains a flat collection of all lecture code files in one place for quick review, along with test files and experiments.
 
 | File | Lecture |
 | --- | --- |

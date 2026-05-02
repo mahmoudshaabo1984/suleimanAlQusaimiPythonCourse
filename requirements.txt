@@ -1,0 +1,51 @@
+# =============================================================================
+# requirements.txt - Python Course Dependencies
+# suleimanAlQusaimiPythonCourse by Mahmoud Shaabo
+# =============================================================================
+#
+# This educational Python course uses ONLY Python Standard Library modules.
+# No third-party packages need to be installed via pip.
+#
+# Python version required: 3.8 or higher
+#   Download Python: https://www.python.org/downloads/
+#
+# =============================================================================
+# Standard Library Modules Used in This Course (no installation needed)
+# =============================================================================
+#
+#   random       - Used in: Number Guessing Game, Password Generator
+#                  Generates random numbers, choices, and passwords
+#
+#   winsound     - Used in: Number Guessing Game (Windows only)
+#                  Plays audio feedback sounds for accessibility
+#                  Note: This module is Windows-specific (built into Windows Python)
+#
+#   webbrowser   - Used in: Link Manager applications (Lectures 7, 9)
+#                  Opens URLs in the default web browser
+#
+#   argparse     - Used in: apps/channel_name_gen/cli.py
+#                  Parses command-line arguments for the CLI tool
+#
+#   typing       - Used in: apps/channel_name_gen/generator.py
+#                  Provides type hints (List, Tuple) for better code clarity
+#
+# =============================================================================
+# Optional Development Tools (for contributors only)
+# =============================================================================
+
+# Code linting - checks code style and catches errors
+flake8>=6.0.0
+
+# Advanced linting with detailed reports
+pylint>=3.0.0
+
+# Code formatting
+autopep8>=2.0.0
+
+# =============================================================================
+# To install development tools, run:
+#   pip install -r requirements.txt
+#
+# To verify your Python version, run:
+#   python --version
+# =============================================================================
