@@ -367,6 +367,7 @@ The `suleimanAlQusaimiPythonCourse tested/` folder contains tested and revised v
 | `7.py` | Tested code for lecture 7. |
 | `8.py` | Tested code for lecture 8. |
 | `9.py` | Tested code for lecture 9. |
+| `10.py` | Tested code for lecture 10 — file write, append, read; multiplication table to `table.txt`; grades lookup using `grades_data.txt`. |
 | `final_appfor5.py` | Final application for lecture 5. |
 | `final_app_for_6.py` | Final application for lecture 6. |
 | `final_app_for_7.py` | Final application for lecture 7. |
@@ -378,6 +379,17 @@ The `suleimanAlQusaimiPythonCourse tested/` folder contains tested and revised v
 | `final_app_links_Dictionary_for _9.py` | Links dictionary final application for lecture 9. |
 | `final_app_smart_link_manager_v1_for_9.py` | Smart link manager version 1 final application for lecture 9. |
 | `final_app_smart_link_manager_v2_for_9.py` | Smart link manager version 2 final application for lecture 9. |
+| `final_app_first_app_writing_files_for_10.py` | Lecture 10 final app 1 — UTF-8 file writing, appending, and reading (`data_1.txt`). |
+| `final_app_second_app_multiplication_table_for_10.py` | Lecture 10 final app 2 — writes a multiplication table to `table2.txt`. |
+| `final_app_third_app_student_grades_for10.py` | Lecture 10 final app 3 — reads student names and grades from `grades_data2.txt` and searches interactively. |
+| `final_app_diary_system_for_10.py` | Lecture 10 final app 4 — append-mode diary; saves notes to `diary.txt` then prints the full journal. |
+| `data1.txt` | Sample data produced when running `10.py` file exercises (same patterns as `data_1.txt`). |
+| `data_1.txt` | Sample data produced when running `final_app_first_app_writing_files_for_10.py`. |
+| `diary.txt` | Diary entries written by `final_app_diary_system_for_10.py`. |
+| `grades_data.txt` | Sample grades file read by the grades section of `10.py`. |
+| `grades_data2.txt` | Student grades input file for `final_app_third_app_student_grades_for10.py`. |
+| `table.txt` | Multiplication table output from `10.py`. |
+| `table2.txt` | Multiplication table output from `final_app_second_app_multiplication_table_for_10.py`. |
 | `sounds/` | Audio files used by the tested programs. |
 | `.vscode/` | Visual Studio Code workspace settings. |
 
@@ -424,6 +436,18 @@ python apps/file_operations.py
 python apps/multiplication_table.py
 python apps/student_grades.py
 python "apps/Number Guessing Game.py"
+```
+
+### Running tested Lecture 10 applications
+
+These examples use quoted paths because the tested folder name contains a space. Run them from the repository root so relative paths to the `.txt` files resolve correctly.
+
+```bash
+python "suleimanAlQusaimiPythonCourse tested/10.py"
+python "suleimanAlQusaimiPythonCourse tested/final_app_first_app_writing_files_for_10.py"
+python "suleimanAlQusaimiPythonCourse tested/final_app_second_app_multiplication_table_for_10.py"
+python "suleimanAlQusaimiPythonCourse tested/final_app_third_app_student_grades_for10.py"
+python "suleimanAlQusaimiPythonCourse tested/final_app_diary_system_for_10.py"
 ```
 
 ### Important Note About Sound Files
