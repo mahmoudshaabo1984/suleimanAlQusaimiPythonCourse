@@ -1,0 +1,16 @@
+English text for the GitHub repository "About" description field
+================================================================
+
+On the repository page: click the gear icon next to "About", paste one
+of the lines below into Description, then Save.
+
+Primary (recommended):
+Hands-on Python for blind learners (Level 1) with Suleiman Al-Qusaimi—standard-library scripts, lecture guides, and mini-apps from basics through file I/O (UTF-8), plus a tested reference folder. Arabic lessons on Ali Al-Amri's channel.
+
+Shorter (if the primary text exceeds GitHub's limit):
+Beginner Python exercises and mini-apps for blind learners—Level 1 with Suleiman Al-Qusaimi. Standard library only; lectures 2–10 with Arabic instruction and accessibility-focused documentation.
+
+Optional: after installing GitHub CLI (https://cli.github.com/) and running
+  gh auth login
+you can set the description from the repository root with:
+  gh repo edit mahmoudshaabo1984/suleimanAlQusaimiPythonCourse --description "PASTE_PRIMARY_LINE_HERE"

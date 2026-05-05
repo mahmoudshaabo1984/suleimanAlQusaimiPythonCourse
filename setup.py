@@ -13,8 +13,9 @@ setup(
     author="Mahmoud Shaabo",
     author_email="",
     description=(
-        "An accessible Python programming course designed for "
-        "blind and visually impaired learners"
+        "Beginner Python exercises and mini-apps for blind learners, "
+        "Level 1 with Suleiman Al-Qusaimi. Standard library only; lectures "
+        "2–10 with Arabic instruction and accessibility-focused documentation."
     ),
     long_description=open("README.md", encoding="utf-8").read(),
     long_description_content_type="text/markdown",
